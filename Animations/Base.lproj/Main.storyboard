@@ -58,29 +58,32 @@
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z9r-Bw-Nmr">
-                                <rect key="frame" x="16" y="387" width="382" height="50"/>
+                                <rect key="frame" x="16" y="387" width="382" height="60"/>
                                 <color key="backgroundColor" red="0.39150054499999998" green="0.37300813710000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="WUF-A0-XF8"/>
+                                    <constraint firstAttribute="height" constant="60" id="Nje-ag-yL4"/>
                                 </constraints>
                                 <state key="normal" title="Button">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                        <integer key="value" value="5"/>
+                                        <integer key="value" value="30"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="didTapButton:" destination="kkg-TQ-fEB" eventType="touchUpInside" id="KwB-G6-4bj"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="Z9r-Bw-Nmr" firstAttribute="top" secondItem="9la-iQ-Ivz" secondAttribute="bottom" constant="93" id="EnK-YP-fw4"/>
                             <constraint firstItem="9la-iQ-Ivz" firstAttribute="trailing" secondItem="Hhy-sF-yE4" secondAttribute="trailing" id="QYh-qK-vgB"/>
                             <constraint firstItem="9la-iQ-Ivz" firstAttribute="leading" secondItem="Hhy-sF-yE4" secondAttribute="leading" id="SRH-kg-2LV"/>
                             <constraint firstItem="9la-iQ-Ivz" firstAttribute="top" secondItem="Hhy-sF-yE4" secondAttribute="top" id="jEX-ER-ZFE"/>
-                            <constraint firstItem="Z9r-Bw-Nmr" firstAttribute="leading" secondItem="Hhy-sF-yE4" secondAttribute="leading" constant="16" id="mWV-ec-L1F"/>
-                            <constraint firstItem="Hhy-sF-yE4" firstAttribute="trailing" secondItem="Z9r-Bw-Nmr" secondAttribute="trailing" constant="16" id="r3M-Du-JN1"/>
+                            <constraint firstItem="Z9r-Bw-Nmr" firstAttribute="leading" secondItem="Hhy-sF-yE4" secondAttribute="leading" constant="16" id="prt-W4-ZEp"/>
+                            <constraint firstItem="Hhy-sF-yE4" firstAttribute="trailing" secondItem="Z9r-Bw-Nmr" secondAttribute="trailing" constant="16" id="qBF-6z-24E"/>
+                            <constraint firstItem="Z9r-Bw-Nmr" firstAttribute="top" secondItem="9la-iQ-Ivz" secondAttribute="bottom" constant="93" id="sRF-k5-vGh"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Hhy-sF-yE4"/>
                     </view>
@@ -88,6 +91,7 @@
                     <connections>
                         <outlet property="boxHeightConstraint" destination="Wdx-qJ-Yed" id="NyN-pV-zrM"/>
                         <outlet property="boxView" destination="mlG-R0-nM8" id="JMX-Mg-kTA"/>
+                        <outlet property="customButton" destination="Z9r-Bw-Nmr" id="nQr-u3-wQL"/>
                         <outlet property="viewDeFora" destination="9la-iQ-Ivz" id="g0x-Fy-R3y"/>
                     </connections>
                 </viewController>

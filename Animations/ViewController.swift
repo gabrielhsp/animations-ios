@@ -12,6 +12,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var viewDeFora: UIView!
     @IBOutlet weak var boxView: UIView!
     @IBOutlet weak var boxHeightConstraint: NSLayoutConstraint!
+    @IBOutlet weak var customButton: UIButton!
     
     var isExpanded: Bool = false
     
@@ -29,6 +30,16 @@ class ViewController: UIViewController {
         UIView.animate(withDuration: 0.5) {
             self.boxHeightConstraint.constant = height
             self.viewDeFora.layoutIfNeeded()
+        }
+    }
+    
+    @IBAction func didTapButton(_ sender: Any) {
+        UIView.animate(withDuration: 0.2, animations: {
+            self.customButton.transform = CGAffineTransform(scaleX: 1.05, y: 1.05)
+        }) { finished in
+            UIView.animate(withDuration: 0.2, animations: {
+                self.customButton.transform = CGAffineTransform(scaleX: 1, y: 1)
+            })
         }
     }
 }

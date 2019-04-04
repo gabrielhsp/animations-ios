@@ -40,7 +40,7 @@ class ViewController: UIViewController {
                 self.loadingViewTap(nil)
             })
         }
-    }	
+    }
     
     @objc func handleTap(gesture: UITapGestureRecognizer) {
         self.isExpanded = !isExpanded

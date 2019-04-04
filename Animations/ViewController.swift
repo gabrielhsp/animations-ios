@@ -9,12 +9,27 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    @IBOutlet weak var viewDeFora: UIView!
+    @IBOutlet weak var boxView: UIView!
+    @IBOutlet weak var boxHeightConstraint: NSLayoutConstraint!
+    
+    var isExpanded: Bool = false
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
+        boxView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(handleTap(gesture:))))
     }
-
-
+    
+    @objc func handleTap(gesture: UITapGestureRecognizer) {
+        self.isExpanded = !isExpanded
+        
+        let height: CGFloat = isExpanded ? 300 : 50
+        
+        UIView.animate(withDuration: 0.5) {
+            self.boxHeightConstraint.constant = height
+            self.viewDeFora.layoutIfNeeded()
+        }
+    }
 }
 

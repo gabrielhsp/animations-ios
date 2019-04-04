@@ -49,7 +49,7 @@
                                         </userDefinedRuntimeAttributes>
                                     </view>
                                 </subviews>
-                                <color key="backgroundColor" red="0.0" green="0.99143940210000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="0.26734498509999999" green="0.3273737558" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="250" id="9zU-XE-KSa"/>
                                     <constraint firstItem="mlG-R0-nM8" firstAttribute="leading" secondItem="9la-iQ-Ivz" secondAttribute="leading" constant="8" id="KZC-bl-qDW"/>
@@ -75,12 +75,45 @@
                                     <action selector="didTapButton:" destination="kkg-TQ-fEB" eventType="touchUpInside" id="KwB-G6-4bj"/>
                                 </connections>
                             </button>
+                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bgC-jx-CxE">
+                                <rect key="frame" x="20" y="517" width="378" height="15"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iqx-Kf-Tpz">
+                                        <rect key="frame" x="0.0" y="0.0" width="20" height="15"/>
+                                        <color key="backgroundColor" red="0.26734498509999999" green="0.3273737558" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="20" id="89W-HH-ier"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" red="0.83741801979999997" green="0.83743780850000005" blue="0.83742713930000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="iqx-Kf-Tpz" firstAttribute="height" secondItem="bgC-jx-CxE" secondAttribute="height" id="3OU-fj-RDx"/>
+                                    <constraint firstAttribute="height" constant="15" id="5dC-jE-j60"/>
+                                    <constraint firstItem="iqx-Kf-Tpz" firstAttribute="leading" secondItem="bgC-jx-CxE" secondAttribute="leading" id="e05-8H-eWd"/>
+                                    <constraint firstAttribute="bottom" secondItem="iqx-Kf-Tpz" secondAttribute="bottom" id="hoB-6r-GR5"/>
+                                    <constraint firstItem="iqx-Kf-Tpz" firstAttribute="top" secondItem="bgC-jx-CxE" secondAttribute="top" id="jJe-Cz-hnk"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="bgC-jx-CxE" firstAttribute="leading" secondItem="Hhy-sF-yE4" secondAttribute="leading" constant="20" id="GqK-8b-jmy"/>
                             <constraint firstItem="9la-iQ-Ivz" firstAttribute="trailing" secondItem="Hhy-sF-yE4" secondAttribute="trailing" id="QYh-qK-vgB"/>
                             <constraint firstItem="9la-iQ-Ivz" firstAttribute="leading" secondItem="Hhy-sF-yE4" secondAttribute="leading" id="SRH-kg-2LV"/>
                             <constraint firstItem="9la-iQ-Ivz" firstAttribute="top" secondItem="Hhy-sF-yE4" secondAttribute="top" id="jEX-ER-ZFE"/>
+                            <constraint firstItem="Hhy-sF-yE4" firstAttribute="trailing" secondItem="bgC-jx-CxE" secondAttribute="trailing" constant="16" id="l48-O8-L5O"/>
+                            <constraint firstItem="bgC-jx-CxE" firstAttribute="top" secondItem="Z9r-Bw-Nmr" secondAttribute="bottom" constant="70" id="lcD-si-rUb"/>
                             <constraint firstItem="Z9r-Bw-Nmr" firstAttribute="leading" secondItem="Hhy-sF-yE4" secondAttribute="leading" constant="16" id="prt-W4-ZEp"/>
                             <constraint firstItem="Hhy-sF-yE4" firstAttribute="trailing" secondItem="Z9r-Bw-Nmr" secondAttribute="trailing" constant="16" id="qBF-6z-24E"/>
                             <constraint firstItem="Z9r-Bw-Nmr" firstAttribute="top" secondItem="9la-iQ-Ivz" secondAttribute="bottom" constant="93" id="sRF-k5-vGh"/>
@@ -92,6 +125,8 @@
                         <outlet property="boxHeightConstraint" destination="Wdx-qJ-Yed" id="NyN-pV-zrM"/>
                         <outlet property="boxView" destination="mlG-R0-nM8" id="JMX-Mg-kTA"/>
                         <outlet property="customButton" destination="Z9r-Bw-Nmr" id="nQr-u3-wQL"/>
+                        <outlet property="loadingViewDeDentro" destination="iqx-Kf-Tpz" id="p7M-Ay-GOv"/>
+                        <outlet property="loadingViewDeFora" destination="bgC-jx-CxE" id="Zgx-Gf-LvH"/>
                         <outlet property="viewDeFora" destination="9la-iQ-Ivz" id="g0x-Fy-R3y"/>
                     </connections>
                 </viewController>
